@@ -1,6 +1,8 @@
 package Models;
 
-public class Role {
+import Abstract.BaseModel;
+
+public class Role extends BaseModel {
     private int id;
     private String name;
     private String description;
@@ -33,5 +35,20 @@ public class Role {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    @Override
+    public void create() {
+
+    }
+
+    @Override
+    public void delete() {
+
+    }
+
+    @Override
+    public void update() {
+
     }
 }

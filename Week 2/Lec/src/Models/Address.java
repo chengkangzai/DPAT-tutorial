@@ -1,6 +1,8 @@
 package Models;
 
-public class Address {
+import Abstract.BaseModel;
+
+public class Address extends BaseModel {
     private String street;
     private String city;
     private String state;
@@ -43,5 +45,20 @@ public class Address {
 
     public void setZip(String zip) {
         this.zip = zip;
+    }
+
+    @Override
+    public void create() {
+
+    }
+
+    @Override
+    public void delete() {
+
+    }
+
+    @Override
+    public void update() {
+
     }
 }
