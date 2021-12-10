@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>com.company</OriginalElement>
+  <nodes>
+    <node x="515.0" y="148.0">com.company.Seller</node>
+    <node x="0.0" y="407.0">com.company.Product</node>
+    <node x="659.0" y="0.0">com.company.Person</node>
+    <node x="62.0" y="236.0">com.company.Company</node>
+    <node x="404.0" y="11.5">com.company.ProductInterface</node>
+    <node x="0.0" y="616.0">com.company.Main</node>
+    <node x="105.0" y="0.0">com.company.Address</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="com.company.Seller" target="com.company.Person" relationship="GENERALIZATION">
+      <point x="58.75" y="-60.0" />
+      <point x="691.25" y="123.0" />
+      <point x="743.5" y="123.0" />
+      <point x="0.0" y="49.0" />
+    </edge>
+    <edge source="com.company.Seller" target="com.company.ProductInterface" relationship="REALIZATION">
+      <point x="-58.75" y="-60.0" />
+      <point x="573.75" y="123.0" />
+      <point x="521.5" y="123.0" />
+      <point x="0.0" y="37.5" />
+    </edge>
+    <edge source="com.company.Product" target="com.company.Company" relationship="TO_ONE">
+      <point x="-89.75" y="-82.0" />
+      <point x="89.75" y="382.0" />
+      <point x="120.75" y="382.0" />
+      <point x="-58.75" y="60.5" />
+    </edge>
+    <edge source="com.company.Company" target="com.company.Address" relationship="TO_ONE">
+      <point x="58.75" y="-60.5" />
+      <point x="238.25" y="211.0" />
+      <point x="216.75" y="211.0" />
+      <point x="37.25" y="93.0" />
+    </edge>
+    <edge source="com.company.Product" target="com.company.Company" relationship="DEPENDENCY">
+      <point x="89.75" y="-82.0" />
+      <point x="269.25" y="382.0" />
+      <point x="238.25" y="382.0" />
+      <point x="58.75" y="60.5" />
+    </edge>
+    <edge source="com.company.Company" target="com.company.Address" relationship="DEPENDENCY">
+      <point x="-58.75" y="-60.5" />
+      <point x="120.75" y="211.0" />
+      <point x="142.25" y="211.0" />
+      <point x="-37.25" y="93.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic" zoom="1.0" showDependencies="true" x="414.0" y="346.0" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Constructors</Category>
+    <Category>Fields</Category>
+    <Category>Methods</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
