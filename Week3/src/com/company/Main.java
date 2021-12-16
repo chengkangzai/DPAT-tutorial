@@ -5,33 +5,29 @@ import java.util.Objects;
 public class Main {
 
     public static void main(String[] args) {
-        MaxisFactory obj = new MaxisFactory();
-        CommunicationService objS = obj.getService("mobile");
+        MaxisDriver obj = new MaxisDriver();
+        CommunicationService objS = obj.getService("collaboration");
         objS.Registration("group");
         System.out.println("Information: " + objS.getServiceInfo());
     }
 }
 
+interface CommunicationService {
+    String service = null;
 
-//product class
-abstract class CommunicationService {
-    private String service;
+    void Registration(String group);
 
-    public abstract void Registration(String data);
-
-    public String getServiceInfo() {
-        return "Service: " + this.service;
-    }
+    String getServiceInfo();
 }
 
 //concrete class
-class MaxisFibre extends CommunicationService {
+class MaxisFibre implements CommunicationService {
     private String service;
     private String setup;
 
     @Override
     public void Registration(String s) {
-        service = s;
+        this.service = s;
         this.setup = "line installation";
     }
 
@@ -41,7 +37,7 @@ class MaxisFibre extends CommunicationService {
     }
 }
 
-class MaxisMobile extends CommunicationService {
+class MaxisMobile implements CommunicationService {
     private String service;
     private String plan;
 
@@ -60,7 +56,7 @@ class MaxisMobile extends CommunicationService {
     }
 }
 
-class MaxisPartner extends CommunicationService {
+class MaxisPartner implements CommunicationService {
     private String service;
     private String description;
 
@@ -78,13 +74,12 @@ class MaxisPartner extends CommunicationService {
 
     @Override
     public String getServiceInfo() {
-        return super.getServiceInfo() + "\nCollaboration : " + service + "\n Description: " + description;
+        return "Collaboration : " + service + "\n Description: " + description;
     }
 
 }
 
-//creator a factory class (application)
-class MaxisFactory {
+class MaxisDriver {
     public CommunicationService getService(String data) {
         if (data == null) {
             return null;
