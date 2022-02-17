@@ -1,4 +1,4 @@
-package main;
+package State;
 
 public class PreviewView extends EditorView {
     @Override
